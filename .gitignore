@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+#ローカル用の設定ファイルを無視する
+application-local.properties
