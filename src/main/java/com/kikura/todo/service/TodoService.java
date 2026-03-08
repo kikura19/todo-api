@@ -9,5 +9,6 @@ public interface TodoService {
     Todo save(Todo todo);
     void delete(Long id);
     Todo update(Todo todo);
+    void deleteAll(List<Long> ids);
     
 }

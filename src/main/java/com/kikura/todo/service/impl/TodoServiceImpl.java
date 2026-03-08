@@ -31,6 +31,11 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
+    public void deleteAll(List<Long> ids) {
+        todoRepository.deleteByIdsInBatch(ids);
+    }
+
+    @Override
     public Todo update(Todo todo) {
         return todoRepository.findById(todo.getId())
                 .map(existingTodo -> {
