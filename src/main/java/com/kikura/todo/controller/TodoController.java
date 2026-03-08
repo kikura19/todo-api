@@ -22,4 +22,9 @@ public class TodoController {
     public List<Todo> getAll(){
         return todoService.findAll();
     }
+
+    // @PostMapping
+    // public Todo saveTodo(Todo todo){
+    //     return todoService.save(todo);
+    // }
 }
