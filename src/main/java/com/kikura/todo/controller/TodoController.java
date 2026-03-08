@@ -29,10 +29,12 @@ public class TodoController {
         return todoService.findAll();
     }
 
-    // @PostMapping
-    // public Todo saveTodo(Todo todo){
-    // return todoService.save(todo);
-    // }
+@PostMapping
+public ResponseEntity<Todo> add(@RequestBody Todo todo) {
+    // repository.save() は保存後のエンティティ（IDが入っている）を返す
+    Todo savedTodo = todoService.save(todo); 
+    return ResponseEntity.ok(savedTodo); // ここでID付きのオブジェクトが帰る
+}
 
     @PostMapping("/batch-delete")
     public ResponseEntity<Void> batchDelete(@RequestBody List<Long> ids) {
