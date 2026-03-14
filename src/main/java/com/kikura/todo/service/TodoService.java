@@ -2,7 +2,7 @@ package com.kikura.todo.service;
 
 import java.util.List;
 
-import com.kikura.todo.entity.Todo;
+import com.kikura.todo.model.Todo;
 
 public interface TodoService {
     List<Todo> findAll();

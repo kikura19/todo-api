@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.kikura.todo.entity.Todo;
+import com.kikura.todo.model.Todo;
 import com.kikura.todo.repository.TodoRepository;
 import com.kikura.todo.service.TodoService;
 
@@ -41,6 +41,7 @@ public class TodoServiceImpl implements TodoService {
                 .map(existingTodo -> {
                     existingTodo.setTask(todo.getTask());
                     existingTodo.setIsCompleted(todo.getIsCompleted());
+                    existingTodo.setCategory(todo.getCategory());
                     return todoRepository.save(existingTodo);
                 })
                 .orElseThrow(() -> new RuntimeException("Todo not found"));

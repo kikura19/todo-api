@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kikura.todo.entity.Todo;
+import com.kikura.todo.model.Todo;
 import com.kikura.todo.service.TodoService;
 
 import lombok.RequiredArgsConstructor;
